@@ -1,0 +1,38 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link active" aria-current="page" href="{% url 'caesar_index_url' %}">Caesar</a>
+        <a class="nav-link" href="{% url 'vigenere_index_url' %}">Vigenere</a>
+        <a class="nav-link" href="{% url 'blowfish_index_url' %}">Blowfish</a>
+        <a class="nav-link" href="{% url 'rsa_index_url' %}">RSA</a>
+
+      </div>
+    </div>
+  </div>
+</nav>
+
+<form class="" style="width: 30%; margin-left:40%" action="{% url 'blowfish_decode_url' %}" method="post">
+  <div class="" style="padding-top:50px">
+    {% csrf_token %}
+    <h3>Text</h3>
+    {{form.text}}
+    <div class=""style="margin-top:40px;">
+      <h3>Key</h3>
+      {{form.vig_key}}
+
+    </div>
+  </div>
+
+  <button style="margin-top:20px;" type="submit" class="btn btn-danger" name="button">Decode</button>
+</form>
+
+
+
+<h3 style="border:1px solid black">{{result}}</h3>

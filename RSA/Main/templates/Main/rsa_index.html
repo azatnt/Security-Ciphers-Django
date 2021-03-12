@@ -1,0 +1,29 @@
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link active" aria-current="page" href="{% url 'caesar_index_url' %}">Caesar</a>
+        <a class="nav-link" href="{% url 'vigenere_index_url' %}">Vigenere</a>
+        <a class="nav-link" href="{% url 'blowfish_index_url' %}">Blowfish</a>
+        <a class="nav-link" href="{% url 'rsa_index_url' %}">RSA</a>
+
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+<div class="" style="border:1px solid black; padding-left:43%; margin-top:10%;">
+    <h1>Please choose</h1>
+    <div class="" style="padding-left: 30px;">
+      <a href="{% url 'encode_url' %}">Encode</a>
+      <a href="{% url 'decode_url' %}">Decode</a>
+  	</div>
+</div>
